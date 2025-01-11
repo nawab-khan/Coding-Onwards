@@ -25,6 +25,7 @@ public:
                 }
             }
 
+
             if(total >= totalTrips)
                 r = m;
             else
