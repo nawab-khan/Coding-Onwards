@@ -1,6 +1,7 @@
 class Solution {
 public:
 
+    // dp table
     int t[1001][1001];
     
     int helper(int W, int n, vector<int> &val, vector<int> &wt){
@@ -21,6 +22,7 @@ public:
     
     int knapSack(int W, vector<int> &val, vector<int> &wt) {
         
+        //dp table initialization
         memset(t, -1, sizeof(t));
         
         return helper(W, val.size() , val, wt);
