@@ -7,27 +7,20 @@ void merge(vector<int>& vec, int l, int m, int h){
 
     int i = l, j = m+1, k = 0;
 
-    while(i <= m && j <= h){
-
+    while(i <= m && j <= h)
         if(vec[i] <= vec[j])
             res[k++] = vec[i++];
         else
             res[k++] = vec[j++];
-    }
 
-    while(i <= m){
+    while(i <= m)
         res[k++] = vec[i++];
-    }
-
-    while(j <= h){
+    
+    while(j <= h)
         res[k++] = vec[j++];
-    }
 
     for(int i=l;i<=h;i++)
         vec[i] = res[i-l];
-
-    // return vec;
-
 } 
 
 void mergeSort(vector<int>& vec, int l, int h){
@@ -40,10 +33,8 @@ void mergeSort(vector<int>& vec, int l, int h){
         mergeSort(vec, m+1, h);
 
         merge(vec, l, m, h);
-
     }
 
-    // return
 }
 
 
